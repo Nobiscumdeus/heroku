@@ -645,7 +645,7 @@ error_reporting(0);
         </nav>
         <div class="section1">
             <label class="img_text">We teach students with care </label>
-            <img src="/heroku/images/classroom2.png" alt="classroom picture" class="main_img" />
+            <img src="./images/classroom2.png" alt="classroom picture" class="main_img" />
         </div>
         <div class="container">
             <div class="row">
