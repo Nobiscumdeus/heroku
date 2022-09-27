@@ -6,7 +6,8 @@ if(!isset($_SESSION['username'])){
 elseif($_SESSION['usertype']=='student'){
     header("location:login.php");
 }
-$admission=new mysqli('localhost','root','','schoolproject');
+$admission=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
+//$admission=new mysqli('localhost','root','','schoolproject');
 $sql="SELECT *FROM admission";
 $result=mysqli_query($admission,$sql);
 

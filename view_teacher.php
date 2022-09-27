@@ -8,7 +8,8 @@ elseif($_SESSION['usertype']=='student'){
     header("location:login.php");
 }
 //connect to the database
-$data=new mysqli('localhost','root','','schoolproject');
+//$data=new mysqli('localhost','root','','schoolproject');
+$data=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
 $sql="SELECT *FROM teacher";
 $result=mysqli_query($data,$sql);
 

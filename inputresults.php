@@ -8,7 +8,8 @@ if(!isset($_SESSION['usertype'])){
 ?>
 <?php
 //make the connection
-$connect=new mysqli('localhost','root','','rose of sharon');
+$connect=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
+//$connect=new mysqli('localhost','root','','rose of sharon');
 if(!$connect){
     die(mysqli_error());
  

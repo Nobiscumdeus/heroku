@@ -6,8 +6,8 @@ if(!isset($_SESSION['username'])){
 elseif($_SESSION['usertype']=='student'){
     header("location:RoseofSharon-login.php");
 }
-
-$data=new mysqli('localhost','root','','schoolproject');
+$data=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
+//$data=new mysqli('localhost','root','','schoolproject');
 if(isset($_POST['add_teacher'])){
     $t_name=htmlspecialchars(stripslashes(trim($_POST['name'])));
     $t_description=htmlspecialchars(stripslashes(trim($_POST['description'])));

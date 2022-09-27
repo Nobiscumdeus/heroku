@@ -1,15 +1,16 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header('location:RoseofSharon-login.php');
+    header('location:login.php');
 }elseif($_SESSION['usertype']=='student'){
-    header('location:RoseofSharon-login.php');
+    header('location:login.php');
 }
 ?>
 <?php
 error_reporting(0);
 //Connection to the database to be used 
-$connect=new mysqli('localhost','root','','rose of sharon');
+//$connect=new mysqli('localhost','root','','rose of sharon');
+$connect=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
 if(isset($_POST['submit'])){
     $name=htmlspecialchars(stripslashes(trim($_POST['name'])));
     $class=htmlspecialchars(stripslashes(trim($_POST['class'])));

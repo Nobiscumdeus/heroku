@@ -7,7 +7,8 @@ if(!isset($_SESSION['username'])){
 elseif($_SESSION['usertype']=='student'){
     header("location:login.php");
 }
-$data=new mysqli('localhost','root','','schoolproject');
+//$data=new mysqli('localhost','root','','schoolproject');
+$data=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
 if($_GET['teacher_id']){
     $t_id=$_GET['teacher_id'];
 

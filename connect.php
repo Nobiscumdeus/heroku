@@ -96,5 +96,6 @@ if(isset($connect)){
 }else{
     die("An error in connection".mysqli_error($connect));
 }
+$connection=new mysqli("mysql://bfeacbb227cae1:4e4f1f58@us-cdbr-east-06.cleardb.net/heroku_e309c0affc5c52d?reconnect=true", "bfeacbb227cae1", "4e4f1f58", "heroku_e309c0affc5c52d");
 ?>
 
