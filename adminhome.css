@@ -1,0 +1,201 @@
+
+/****************** For Mobile Phones  **************/
+
+@media (max-width:360px){
+    *{
+        margin:0;
+        padding:0;
+        
+    
+    }
+    .header{
+        background-color:skyblue;
+        line-height:70px;
+        padding-left:20px;
+        color:white;
+        font-size:20px;
+        font-weight:600;
+    }
+    a{
+        text-decoration:none;
+    
+    }
+    div a{
+        text-decoration: none;
+    }
+    .logout{
+        float:right;
+        padding-right:20px;
+    }
+    button a{
+        color:white;
+    }
+    ul{
+        background-color:#424a5b;
+        width:35%;
+        height:100%;
+        position:fixed;
+        padding-top:5%;
+        text-align:center;
+    }
+    ul li{
+        list-style-type:none;
+        padding-bottom:30px;
+        font-size:16px;
+    }
+    ul li a{
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+    }
+    ul li a:hover{
+        color:skyblue;
+        text-decoration:none!important;
+    }
+    .content{
+        margin-left:43%;
+        margin-top:5%;
+        
+    }
+    .content h3{
+        font-size:16px;
+
+    }
+
+}
+
+/******* For Landscape Orientation *********/
+
+@media (orientation:landscape){
+    
+*{
+    margin:0;
+    padding:0;
+   
+
+}
+.header{
+    width:100%;
+    height:40px;
+    background-color:skyblue;
+    line-height:40px;
+    padding-left:30px;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+}
+a{
+    text-decoration:none;
+
+}
+div a{
+    text-decoration: none;
+}
+.logout{
+    width:15%;
+    float:right;
+    padding-right:30px;
+}
+.logout button{
+    width:auto;
+    height:auto;
+}
+button a{
+    color:white;
+}
+ul{
+    background-color:#424a5b;
+    width:20%;
+    height:100%;
+    position:fixed;
+    padding-top:5px;
+    text-align:center;
+    
+}
+ul li{
+    list-style-type:none;
+    padding-bottom:10px;
+    font-size:10px;
+}
+ul li a{
+    text-decoration:none;
+    font-size:12px;
+    color:white;
+    font-weight:bold;
+}
+ul li a:hover{
+    color:skyblue;
+    text-decoration:none!important;
+}
+.content{
+    margin-left:30%;
+    margin-top:5%;
+}
+
+}
+/********* For Laptop Screens ******/
+
+@media (min-width:1200px){
+
+    
+
+
+*{
+    margin:0;
+    padding:0;
+
+}
+.header{
+    background-color:skyblue;
+    height:65px;
+    line-height:70px;
+    padding-left:30px;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+}
+a{
+    text-decoration:none;
+
+}
+div a{
+    text-decoration: none;
+}
+.logout{
+    float:right;
+    padding-right:30px;
+}
+button a{
+    color:white;
+}
+ul{
+    background-color:#424a5b;
+    width:18%;
+    height:100%;
+    position:fixed;
+    padding-top:5%;
+    text-align:center;
+}
+ul li{
+    list-style-type:none;
+    padding-bottom:25px;
+    font-size:25px;
+}
+ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+ul li a:hover{
+    color:skyblue;
+    text-decoration:none!important;
+}
+.content{
+    margin-left:20%;
+    margin-top:5%;
+}
+
+
+
+}
+

@@ -1,0 +1,427 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:RoseofSharon-login.php');
+}elseif($_SESSION['usertype']=='student'){
+    header('location:RoseofSharon-login.php');
+}
+?>
+<?php
+error_reporting(0);
+//Connection to the database to be used 
+$connect=new mysqli('localhost','root','','rose of sharon');
+if(isset($_POST['submit'])){
+    $name=htmlspecialchars(stripslashes(trim($_POST['name'])));
+    $class=htmlspecialchars(stripslashes(trim($_POST['class'])));
+    $term=htmlspecialchars(stripslashes(trim($_POST['term'])));
+    $sql="SELECT *FROM mathematics WHERE fullnames='$name' and term='$term' ";
+    $result=mysqli_query($connect,$sql);
+
+  
+    if($result==false){
+        echo "Ooops!!! Sorry, there is nothing to show...";
+    }
+}
+
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Rose of Sharon-results page </title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap/dist/css/bootstrap.min.css" />
+        <style type="text/css">
+            /****** For Mobile Phones Screen ****** */
+            @media(max-width:360px){
+
+                *{
+                margin:0;
+                padding:0;
+               
+               
+            }
+            .head{
+                position:relative;
+                background-color: #fc766aff;
+                min-width:570px;
+                
+                padding-left:70px;
+                margin-left:0;
+                height: 10vh;
+                color:whitesmoke;
+                font-size:25px;
+                line-height:10vh;
+                font-family:sans-serif;
+            }
+            .logout{
+                float:right;
+                padding-right:30px;
+            }
+            .cover{
+                display:grid;
+                grid-template-columns: 1fr 3fr;
+            }
+           
+            .left-side{
+                background-color:#783937ff;
+                min-height:145vh;
+            }
+            .right-side{
+                background-color:#f1ac88ff;
+                min-height: 145vh;
+            }
+            .left-side ul{
+                margin-left:17px;
+                padding-top:20px;
+                margin-bottom:20px;
+
+            }
+            .left-side ul li{
+                
+                margin-top:20px;
+                font-size:20px;
+                font-weight:600;
+                list-style-type:none;
+            }
+            .left-side ul li a {
+                padding-left:5px;
+                text-decoration:none;
+                font-size:20px;
+                font-weight:600;
+            }
+            ul li a:link{
+               color:#f1ac88ff;
+            }
+            .right-side h3{
+                text-transform: uppercase;
+                margin-left:50px;
+                letter-spacing:5px;
+                padding-left:20px;
+                margin-top:10px;
+            }
+            form input{
+                margin-top:10px;
+               
+            }
+            .form{
+                background:white;
+                padding-left:50px;
+                padding-top:20px;
+               
+            }
+        
+         .form-control{
+            transform:scale(0.9);
+            width:350px;
+            padding-top:20px;
+            margin-left:5px;
+         }
+         #submit{
+            width:70%;
+            padding:15px;
+            margin-top:10px;
+            margin-bottom:10px;
+            margin-left:31px;
+            text-transform:uppercase;
+            font-weight:600;
+         }
+
+               
+            }
+
+
+            /************* For Landscape Screens ******** */
+            @media (orientation:landscape){
+
+                 
+            *{
+                margin:0;
+                padding:0;
+               
+               
+            }
+            .head{
+                position:relative;
+                background-color: #fc766aff;
+                width:100%;
+                padding-left:70px;
+                margin-left:0;
+                height: 15vh;
+                color:whitesmoke;
+                font-size:25px;
+                line-height:10vh;
+                font-family:sans-serif;
+            }
+            .logout{
+                float:right;
+                margin-top:5px;
+                padding-right:70px;
+            }
+            .cover{
+                display:grid;
+                grid-template-columns: 1fr 3fr;
+            }
+           
+            .left-side{
+                background-color:#783937ff;
+                min-height:140vh;
+            }
+            .right-side{
+                background-color:#f1ac88ff;
+                min-height: 140vh;
+            }
+            .left-side ul{
+                margin-left:20px;
+                padding-top:20px;
+                margin-bottom:20px;
+
+            }
+            .left-side ul li{
+                margin-top:20px;
+                font-size:20px;
+                font-weight:800;
+                list-style-type:none;
+            }
+            .left-side ul li a {
+                text-decoration:none;
+                font-size:20px;
+                font-weight:800;
+            }
+            ul li a:link{
+               color:#f1ac88ff;
+            }
+            .right-side h3{
+                text-transform: uppercase;
+                margin-left:50px;
+                letter-spacing:5px;
+                padding-left:20px;
+                margin-top:10px;
+            }
+            form input{
+                margin-top:10px;
+               
+            }
+            .form{
+                background:white;
+                padding-left:50px;
+                padding-top:20px;
+               
+            }
+        
+         .form-control{
+            width:70%;
+            padding-top:20px;
+            margin-left:30px;
+         }
+         #submit{
+            width:70%;
+            padding:15px;
+            margin-top:10px;
+            margin-bottom:10px;
+            margin-left:31px;
+            text-transform:uppercase;
+            font-weight:600;
+         }
+       
+
+
+
+            }
+
+            
+         /********** For Laptop Screens alone */
+         @media (min-width:1200px){
+
+            
+            *{
+                margin:0;
+                padding:0;
+               
+               
+            }
+            .head{
+                position:relative;
+                background-color: #fc766aff;
+                width:100%;
+                padding-left:70px;
+                margin-left:0;
+                height: 12vh;
+                color:whitesmoke;
+                font-size:25px;
+                line-height:10vh;
+                font-family:sans-serif;
+            }
+            .logout{
+                float:right;
+                padding-right:70px;
+            }
+            .cover{
+                display:grid;
+                grid-template-columns: 1fr 3fr;
+            }
+           
+            .left-side{
+                background-color:#783937ff;
+                min-height:100vh;
+            }
+            .right-side{
+                background-color:#f1ac88ff;
+                min-height: 100vh;
+            }
+            .left-side ul{
+                margin-left:20px;
+                padding-top:20px;
+                margin-bottom:20px;
+
+            }
+            .left-side ul li{
+                margin-top:20px;
+                font-size:20px;
+                font-weight:800;
+                list-style-type:none;
+            }
+            .left-side ul li a {
+                text-decoration:none;
+                font-size:20px;
+                font-weight:800;
+            }
+            ul li a:link{
+               color:#f1ac88ff;
+            }
+            .right-side h3{
+                text-transform: uppercase;
+                margin-left:50px;
+                letter-spacing:5px;
+                padding-left:20px;
+                margin-top:10px;
+            }
+            form input{
+                margin-top:10px;
+               
+            }
+            .form{
+                background:white;
+                padding-left:50px;
+                padding-top:20px;
+               
+            }
+        
+         .form-control{
+            width:70%;
+            padding-top:20px;
+            margin-left:30px;
+         }
+         #submit{
+            width:70%;
+            padding:15px;
+            margin-top:10px;
+            margin-bottom:10px;
+            margin-left:31px;
+            text-transform:uppercase;
+            font-weight:600;
+         }
+       
+
+
+
+
+            
+}
+           
+         
+    
+        </style>
+    </head>
+    <body>
+        <div class="head"> 
+            Admin Dashboard
+            <div class="logout"> <button class="btn btn-success" > Logout </button></div>
+
+        </div>
+        <div class="cover">
+            <div class="left-side">
+                <ul>
+                    <li><a href="admission.php">Admission</a></li>
+                    <li><a href="add_student.php">Add Student</a></li>
+                    <li><a href="view_student.php">View Student</a></li>
+                    <li><a href="add_teacher.php">Add Teacher</a></li>
+                    <li><a href="view_teacher.php">View Teacher</a></li>
+                    <li><a href="studentresults.php">View Student Results</a></li>
+                    <li><a href="inputresults.php">Enter Results </a></li>
+
+            </div>
+            <div class="right-side">
+                <h3> Check Student Results </h3>
+                <hr/>
+                <div class="form">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                            <input type="text" name="name" class="form-control" placeholder="Full Names of Student e.g Adesida Demilade" id="name" />
+                        
+                            <input type="text" name="class" class="form-control" placeholder="Student's Class e.g JSS1/JSS2/SSS1" id="class" />
+                       
+                            <input type="text" name="term" class="form-control" placeholder="Term e.g First Term/Second Term/Third Term" id="term" />
+                        
+                            <input type="submit" name="submit" class="btn btn-success" id="submit"/>
+                           
+                    </form>
+                </div>
+                <h3> Student Results </h3>
+                <hr/>
+                <table class="table bordered">
+                    <thead>
+                        <tr>
+                            <th>Full Names </th>
+                            <th> Class </th>
+                            <th> Term </th>
+                            <th> Subject </th>
+                            <th> Score </th>
+                            <th> Grade</th>
+                        </tr>
+                    </thead>
+                <!-- We get the result of the database here -->
+                <?php 
+                while($info=$result->fetch_assoc()){
+                ?>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <?php 
+                                echo "{$info['fullnames']}";
+                                ?>
+
+                            </td>
+                            <td>
+                            <?php echo "{$info['class']}";?>
+
+                            </td>
+                            <td>
+                            <?php echo "{$info['term']}";?>
+
+                            </td>
+                            <td>
+                                Mathematics
+                            </td>
+                            <td>
+                            <?php echo "{$info['final_scores']}";?>
+                            </td>
+                            <td>
+                            <?php echo "{$info['grades']}";?>
+                            </td>
+                        </tr>
+                        <?php 
+                        }
+                        ?>
+                    </tbody>
+                    </div>
+                </table>
+
+            </div>
+    </body>
+
+</html>
+
+
