@@ -672,20 +672,20 @@ error_reporting(0);
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="teacher" src="/heroku/images/DSC_5278.JPG" />
+                    <img class="teacher" src="./images/DSC_5278.JPG" />
                     <p>
                         Teaching students passionately so that in no time, the disciples today become 
                         renown professors and authorities in their academic field tomorrow.
                     </p> 
                 </div>
                 <div class="col-md-4">
-                    <img class="teacher" src="/heroku/images/DSC_5286.JPG" /> 
+                    <img class="teacher" src="./images/DSC_5286.JPG" /> 
                     <p>In a vibrant, academically challenging, and encouraging environment 
                         with successful teaching paradigms with room for success in academics established.
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img class="teacher" src="/heroku/images/IMG_20210507_110857.jpg" /> 
+                    <img class="teacher" src="./images/IMG_20210507_110857.jpg" /> 
                     <p>
                         Making tutorials lively and engaging to encourage,impart and promote
                         learner's interest in academics, leaving little or no room for flippancy and 
@@ -700,15 +700,15 @@ error_reporting(0);
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="/heroku/images/law.jfif" class="teacher" alt="a picture is here " />
+                    <img src="./images/law.jfif" class="teacher" alt="a picture is here " />
                     <h5> Arts and Social Science </h5>
                 </div>
                 <div class="col-md-4">
-                    <img src="/heroku/images/science.jfif" class="teacher" alt="picture" />
+                    <img src="./images/science.jfif" class="teacher" alt="picture" />
                     <h5> Science and Engineering </h5>
                 </div>
                 <div class="col-md-4">
-                    <img src="/heroku/images/computer.jfif" class="teacher" alt="picture" />
+                    <img src="./images/computer.jfif" class="teacher" alt="picture" />
                    <h5> Information and Computer Techonology</h5>
                 </div>
             </div>
