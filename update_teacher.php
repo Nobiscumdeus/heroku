@@ -27,9 +27,11 @@ if(isset($_POST['update'])){
     $t_des=htmlspecialchars(stripslashes(trim($_POST['description'])));
     $file=$_FILES['image']['name'];
     //note that $dst here represents destination.
-    $dst="/Hello world/images/".$file;
+    //$dst="/Hello world/images/".$file;
+    $dst="images/".$file;
     //To save file in database
-    $dst_db="/Hello world/images/".$file;
+    //$dst_db="/Hello world/images/".$file;
+    $dst_db="images/".$file;
     move_uploaded_file($_FILES['image']['name'],$dst);
 
     if($file){

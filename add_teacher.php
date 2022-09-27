@@ -1,10 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header("location:RoseofSharon-login.php");
+    header("location:login.php");
 }
 elseif($_SESSION['usertype']=='student'){
-    header("location:RoseofSharon-login.php");
+    header("location:login.php");
 }
 $data=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
 //$data=new mysqli('localhost','root','','schoolproject');
@@ -14,9 +14,12 @@ if(isset($_POST['add_teacher'])){
     //You deal with an image file a little bit differently
     $file=basename($_FILES['image']['name']);
     //note that $dst here represents destination.
-    $dst="C:/xampp/htdocs/Hello world/images/";
+    //$dst="C:/xampp/htdocs/Hello world/images/";
+    $dst="images";
+   
     //To save file in database
-    $dst_db="/Hello world/images/".$file;
+    //$dst_db="/Hello world/images/".$file;
+    $dst_db="images/".$file;
     move_uploaded_file($_FILES['image']['tmp_name'],"$dst/$file");
     $sql="INSERT INTO teacher(name,description,image)
     VALUES('$t_name','$t_description','$dst_db')";
@@ -25,7 +28,7 @@ if(isset($_POST['add_teacher'])){
     $result=mysqli_query($data,$sql);
     if(isset($result)){
         echo "<script> window.alert('Done successfully');</script>";
-        header("location:RoseofSharon-add_teacher.php");
+        header("location:add_teacher.php");
         
     }
 
