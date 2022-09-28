@@ -1,10 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header("location:RoseofSharon-login.php");
+    header("location:login.php");
 }
 elseif($_SESSION['usertype']=='student'){
-    header("location:RoseofSharon-login.php");
+    header("location:login.php");
 }
 
 //$data=new mysqli('localhost','root','','schoolproject');

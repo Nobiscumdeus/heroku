@@ -16,7 +16,7 @@ if(isset($_POST['apply'])){
     $result=mysqli_query($data,$sql);
     if($result){
         $_SESSION['message']="Your Application is Successful...";
-        header("location:RoseofSharon-index.php");
+        header("location:index.php");
 
     }else{
         echo "oops!!! Application Failed!";

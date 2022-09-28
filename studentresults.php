@@ -340,7 +340,7 @@ if(isset($_POST['submit'])){
     <body>
         <div class="head"> 
             Admin Dashboard
-            <div class="logout"> <button class="btn btn-success" > Logout </button></div>
+            <div class="logout"> <button class="btn btn-success" onclick='login()'> Logout</button></div>
 
         </div>
         <div class="cover">
@@ -421,6 +421,11 @@ if(isset($_POST['submit'])){
                 </table>
 
             </div>
+            <script>
+                function login(){
+                    window.location('login.php');
+                }
+                </script>
     </body>
 
 </html>
