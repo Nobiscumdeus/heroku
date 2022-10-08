@@ -19,37 +19,9 @@ error_reporting(0);
         <script src="/Bootstrap/jquery/jquery-3.6.1.min.js"> </script>
         <style type="text/css">
             /** Bootstrap Media Queries for small devices(tablets,PHONES,768px and up ) **/
-            @media (min-width:768px){
-               *{
-                margin:0;
-                padding:0;
-                box-sizing: border-box;
-               }
-               nav{
-                position:fixed;
-                background-color: skyblue;
-                height:70px;
-                width:100%;
-                z-index:1;
-            }
-            .logo{
-                font-size: 25px;
-                position:relative;
-                left:5%;
-                color:white;
-                font-weight:bold;
-                line-height:70px;
-            }
-
-
-
-
-            }
+          
              /** Bootstrap Media Queries for desktops devices(desktops,992px and up ) **/
-             @media (min-width:992px){
-               
-
-            }
+            
              /** Bootstrap Media Queries for large desktops(tablets,laptops,1200px and up ) **/
              @media (min-width:1200px){
                
@@ -72,6 +44,10 @@ error_reporting(0);
                     color:white;
                     font-weight:bold;
                     line-height:70px;
+                }
+                .roselogo{
+                    width:70px;
+                    height:70px
                 }
                 ul{
                     position:relative;
@@ -184,154 +160,7 @@ error_reporting(0);
 
 
 
-             /** Bootstrap Media Queries for large desktops(tablets,PHONES and up ) **/
-             @media (max-width:360px){
-               
-
-                *{
-                    margin:0;
-                    padding:0;
-                    box-sizing: border-box;
-                   }
-                nav{
-                    position:fixed;
-                    background-color: skyblue;
-                    height:150px;
-                    width:100%;
-                    z-index:1;
-                }
-                .logo{
-                    font-size: 20px;
-                    position:relative;
-                    text-transform:uppercase;
-                    text-align:center;
-                    
-                    color:black;
-                    font-weight:bold;
-                    line-height: 30px;
-                }
-                nav ul{
-                    display:inline;
-                    
-                    
-                }
-                nav ul li{
-                    float:left;
-                }
-                ul{
-                    position:relative;
-                    float:right;
-                    margin-right:2px;
-                }
-                ul li{
-                    display:inline-block;
-                    line-height:70px;
-                    margin:0 5px;
-                
-                }
-                ul li a {
-                    text-decoration:none;
-                    color:black;
-                    font-weight:800;
-                    font-size:17px;
-                }
-                .main_img{
-                    width:100%;
-                    height:250px;
-                }
-                .section1{
-                    padding-top: 70px;
-                }
-                .img_text{
-                    position:absolute;
-                    top:25%;
-                    left:10%;
-                    color:white;
-                    background-color:midnightblue;
-                    margin-top:30px;
-                    padding-right:5px;
-                    padding-left:5px;
-                    font-size:20px;
-                }
-                .second_image{
-                    display:none;
-                    width:100%;
-                    height:250px;
-                    margin:0px;
-                }
-                .container{
-                    padding-top:50px;
-                }
-                .teacher{
-                    width:100%;
-                    height:200px;
-                }
-                .label_text{
-                    display:inline-block;
-                    width:100px;
-                    text-align:right;
-                    padding-right:10px;
-                    font-weight:bold;
-                }
-                .input_deg{
-                    width:70%;
-                    height:30px;
-                    border-radius:15px;
-                    border:2px solid blue;
-                }
-                .adm_int{
-                    padding-top:5px;
-                    padding-left:0px;
-                    margin-left:0;
-                    padding-bottom: 2px;
-                    padding-right:12px;
-                }
-                .input_txt{
-                    width:70%;
-                    height:120px;
-                    border-radius:5px;
-                    border:1px solid blue;
-                }
-                #submit{
-                    position:relative;
-                    width:50%;
-                    left:5%;
-                }
-                footer{
-                    background-color:black;
-                    height: 50px;
-                    width:100%;
-                    
-                
-                }
-                .footer_text{
-                    
-                    color:whitesmoke;
-                    top:20%;
-                    position:relative;
-                    font-size:small;
-                    padding-left: 30px;
-                }
-                .adm{
-                    padding-top:20px;
-                    padding-bottom:10px;
-                    text-transform: uppercase;
-                    letter-spacing: 5px;
-                }
-                input:focus{
-                    background-color:grey;
-                    color:yellow;
-                    outline:2px solid green;
-                }
-                input:invalid{
-                    background-color:red;
-                }
-                #contact{
-                    color:white;
-                    text-decoration:none;
-                }
-    
-            }
+            
             /** Specific application for landscape **/
             @media(orientation:landscape){
 
@@ -353,6 +182,10 @@ error_reporting(0);
                     color:white;
                     font-weight:bold;
                     line-height:70px;
+                }
+                .roselogo{
+                    width:80px;
+                    height:80px;
                 }
                 ul{
                     position:relative;
@@ -466,163 +299,170 @@ error_reporting(0);
 
 
             }
-
-
-
-
-
-             /** Bootstrap Media Queries for large desktops(tablets,1200px and up ) **/
-             @media (max-width:360px){
+            /** Bootstrap Media Queries for large desktops(tablets,1200px and up ) **/
+            @media (max-width:360px){
                
 
-                *{
-                    margin:0;
-                    padding:0;
-                    box-sizing: border-box;
-                   }
-                nav{
-                    position:fixed;
-                    background-color: skyblue;
-                    height:150px;
-                    width:100%;
-                    z-index:1;
-                }
-                .logo{
-                    margin-top:5px;
-                    font-size: 30px;
-                    position:relative;
-                    text-transform:uppercase;
-                    text-align:center;
-                    
-                    color:black;
-                    font-weight:bold;
-                    line-height: 30px;
-                }
-                nav ul{
-                    display:inline;
-                    
-                    
-                }
-                nav ul li{
-                    float:left;
-                }
-                ul{
-                    position:relative;
-                    float:right;
-                    margin-right:2px;
-                }
-                ul li{
-                    display:inline-block;
-                    line-height:70px;
-                    margin:0 5px;
-                
-                }
-                ul li a {
-                    text-decoration:none;
-                    color:black;
-                    font-weight:800;
-                    font-size:17px;
-                }
-                .main_img{
-                    width:100%;
-                    height:250px;
-                }
-                .section1{
-                    padding-top: 70px;
-                }
-                .img_text{
-                    position:absolute;
-                    top:25%;
-                    left:10%;
-                    color:white;
-                    background-color:midnightblue;
-                    margin-top:30px;
-                    padding-right:5px;
-                    padding-left:5px;
-                    font-size:20px;
-                }
-                .second_image{
-                    display:none;
-                    width:100%;
-                    height:250px;
-                    margin:0px;
-                }
-                .container{
-                    padding-top:50px;
-                }
-                .teacher{
-                    width:100%;
-                    height:200px;
-                }
-                .label_text{
-                    display:inline-block;
-                    width:100px;
-                    text-align:right;
-                    padding-right:10px;
-                    font-weight:bold;
-                }
-                .input_deg{
-                    width:70%;
-                    height:30px;
-                    border-radius:15px;
-                    border:2px solid blue;
-                }
-                .adm_int{
-                    padding-top:5px;
-                    padding-left:0px;
-                    margin-left:0;
-                    padding-bottom: 2px;
-                    padding-right:12px;
-                }
-                .input_txt{
-                    width:70%;
-                    height:120px;
-                    border-radius:5px;
-                    border:1px solid blue;
-                }
-                #submit{
-                    position:relative;
-                    width:50%;
-                    left:5%;
-                }
-                footer{
-                    background-color:black;
-                    height: 50px;
-                    width:100%;
-                    
-                
-                }
-                .footer_text{
-                    
-                    color:whitesmoke;
-                    top:20%;
-                    position:relative;
-                    font-size:small;
-                    padding-left: 30px;
-                }
-                .adm{
-                    padding-top:20px;
-                    padding-bottom:10px;
-                    text-transform: uppercase;
-                    letter-spacing: 5px;
-                }
-                input:focus{
-                    background-color:grey;
-                    color:yellow;
-                    outline:2px solid green;
-                }
-                input:invalid{
-                    background-color:red;
-                }
-                #contact{
-                    color:white;
-                    text-decoration:none;
-                }
+               *{
+                   margin:0;
+                   padding:0;
+                   box-sizing: border-box;
+                  }
+               nav{
+                   position:fixed;
+                   background-color: skyblue;
+                   height:175px;
+                   width:100%;
+                   z-index:1;
+               }
+               .logo{
+                   margin-top:5px;
+                   font-size: 30px;
+                   position:relative;
+                   text-transform:uppercase;
+                   
+                   text-align:center;
+                   
+                   color:black;
+                   font-weight:bold;
+                   line-height: 30px;
+               }
+               .roselogo{
+                width:70px;
+                height:70px;
+               }
+               nav ul{
+                   display:inline;
+                   
+                   
+               }
+               nav ul li{
+                   float:left;
+               }
+               ul{
+                   position:relative;
+                   float:right;
+                   margin-right:2px;
+               }
+               ul li{
+                   display:inline-block;
+                   line-height:70px;
+                   margin:0 5px;
+               
+               }
+               ul li a {
+                   text-decoration:none;
+                   color:black;
+                   font-weight:800;
+                   font-size:17px;
+               }
+               .main_img{
+                   width:100%;
+                   height:250px;
+               }
+               .section1{
+                   padding-top: 70px;
+               }
+               .img_text{
+                   position:absolute;
+                   top:25%;
+                   left:10%;
+                   color:white;
+                   background-color:midnightblue;
+                   margin-top:30px;
+                   padding-right:5px;
+                   padding-left:5px;
+                   font-size:20px;
+               }
+               .second_image{
+                   display:none;
+                   width:100%;
+                   height:250px;
+                   margin:0px;
+               }
+               .container{
+                   padding-top:50px;
+               }
+               .teacher{
+                   width:100%;
+                   height:200px;
+               }
+               .label_text{
+                   display:inline-block;
+                   width:100px;
+                   text-align:right;
+                   padding-right:10px;
+                   font-weight:bold;
+                   letter-spacing:2px;
+               }
+               .input_deg{
+                   width:85%;
+                   height:30px;
+                   border-radius:15px;
+                   border:2px solid blue;
+               }
+               .adm_int{
+                   padding-top:5px;
+                   padding-left:2px;
+                   margin-left:0;
+                   padding-bottom: 2px;
+                   padding-right:12px;
+               }
+               .input_txt{
+                   width:85%;
+                   height:120px;
+                   border-radius:5px;
+                   border:1px solid blue;
+               }
+               #submit{
+                   position:relative;
+                   width:50%;
+                   left:5%;
+               }
+               footer{
+                   background-color:black;
+                   height: 50px;
+                   width:100%;
+                   
+               
+               }
+               .footer_text{
+                   
+                   color:whitesmoke;
+                   top:20%;
+                   position:relative;
+                   font-size:small;
+                   padding-left: 30px;
+               }
+               .adm{
+                   padding-top:20px;
+                   padding-bottom:10px;
+                   text-transform: uppercase;
+                   letter-spacing: 5px;
+               }
+               input:focus{
+                   background-color:grey;
+                   color:yellow;
+                   outline:2px solid green;
+               }
+               input:invalid{
+                   background-color:red;
+               }
+               #contact{
+                   color:white;
+                   text-decoration:none;
+               }
 
 
-            }
+           }
 
-           
+          
+
+
+
+
+
+            
            
         </style>
     </head>
@@ -631,6 +471,7 @@ error_reporting(0);
 
         <nav>
             <label class="logo">
+                <img src="./images/roselogo-removebg-preview.png" class="roselogo" alt="loading..." />
                 Rose of Sharon Group of Schools 
             </label>
             <ul>
@@ -657,7 +498,7 @@ error_reporting(0);
                 <h2>Welcome to Rose of Sharon School Akure </h2>
                 <p>Our school is committed to global learning long before it became an indispensable
                     feature of contemporary education. 
-                    Established in 2008, we proudly stand as one of the best grammar schools in Akure,
+                    Established in 2008, we proudly stand as one of the best grammar schools in Akure.
                     We bring our students up in the fear of the Lord and give them quality academic education in all their 
                     courses. 
                     
@@ -672,20 +513,33 @@ error_reporting(0);
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
+                    <!--
                     <img class="teacher" src="./images/DSC_5278.JPG" />
+        -->
+                    <img class="teacher" src="./images/proprietor.jpg" alt="loading..." />
                     <p>
                         Teaching students passionately so that in no time, the disciples today become 
                         renown professors and authorities in their academic field tomorrow.
                     </p> 
                 </div>
                 <div class="col-md-4">
+                    <!--
                     <img class="teacher" src="./images/DSC_5286.JPG" /> 
+        -->
+                    <img class="teacher" src="./images/proprietress.jpg" alt="loading..." />
                     <p>In a vibrant, academically challenging, and encouraging environment 
                         with successful teaching paradigms with room for success in academics established.
                     </p>
                 </div>
                 <div class="col-md-4">
+                    <!--
                     <img class="teacher" src="./images/IMG_20210507_110857.jpg" /> 
+        -->
+                    <img class="teacher" id="segun" src="./images/tutorsegun.jpg" alt="loading..." />
+                    <style>
+                        
+                        
+                        </style>
                     <p>
                         Making tutorials lively and engaging to encourage,impart and promote
                         learner's interest in academics, leaving little or no room for flippancy and 
@@ -754,7 +608,7 @@ error_reporting(0);
 </noscript>
 <script>
     function contact(){
-        window.alert('Reach us through this contact '+ '+23454870116')
+        window.alert('Reach us through this contact '+ '+23438247851')
     }
     //Scrolling to the bottom page after clicking the link
     function bottom(){
