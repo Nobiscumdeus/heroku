@@ -2,8 +2,9 @@
 error_reporting(0);
 session_start();
 //Connection to the database that contains details of students,admins or teachers given access to the portal
-//$data=new mysqli('localhost','root','','schoolproject');
+
 $data=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
+//$data=new mysqli('localhost','root','','schoolproject');
 //Display an error message if there is an error in connection
 if($data===false){
     die("connection error");

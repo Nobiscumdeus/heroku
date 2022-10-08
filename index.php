@@ -471,14 +471,14 @@ error_reporting(0);
 
         <nav>
             <label class="logo">
-                <img src="./images/roselogo-removebg-preview.png" class="roselogo" alt="loading..." />
+                <img src="./images/IMG-20221008-WA0004-removebg-preview.png" class="roselogo" alt="loading..." />
                 Rose of Sharon Group of Schools 
             </label>
             <ul>
               <li><a href="#">Home </a></li>
               <!-- scroll to admission page at the bottom after clicking the admission link -->
               <li> <a class="btn btn-success" href="javascript: document.body.scrollIntoView(false);"> Admission</a></li>
-              <li><a class="btn btn-primary" onclick="contact()" id="contact"> Contact Us </a></li>
+              <li><a class="btn btn-info" onclick="contact()" id="contact"> Contact Us </a></li>
              
               <li><a href="login.php" class="btn btn-success">Login</a></li>
              
@@ -517,6 +517,18 @@ error_reporting(0);
                     <img class="teacher" src="./images/DSC_5278.JPG" />
         -->
                     <img class="teacher" src="./images/proprietor.jpg" alt="loading..." />
+                    <span> Our School Proprietor 
+                        <style>
+                            span{
+                                position:absolute;
+                                left:15%;
+                                font-weight:bold;
+                                bottom:60%;
+                                letter-spacing:5px;
+                                color:white;
+                            }
+                            </style>
+                    </span>
                     <p>
                         Teaching students passionately so that in no time, the disciples today become 
                         renown professors and authorities in their academic field tomorrow.
@@ -527,6 +539,18 @@ error_reporting(0);
                     <img class="teacher" src="./images/DSC_5286.JPG" /> 
         -->
                     <img class="teacher" src="./images/proprietress.jpg" alt="loading..." />
+                    <span id="mummy"> Our school Proprietress 
+                        <style>
+                            #mummy{
+                                position:absolute;
+                                left:15%;
+                                font-weight:bold;
+                                bottom:60%;
+                                letter-spacing:5px;
+                                color:white;
+                            }
+                            </style>
+                    </span>
                     <p>In a vibrant, academically challenging, and encouraging environment 
                         with successful teaching paradigms with room for success in academics established.
                     </p>
@@ -536,10 +560,7 @@ error_reporting(0);
                     <img class="teacher" src="./images/IMG_20210507_110857.jpg" /> 
         -->
                     <img class="teacher" id="segun" src="./images/tutorsegun.jpg" alt="loading..." />
-                    <style>
-                        
-                        
-                        </style>
+                   
                     <p>
                         Making tutorials lively and engaging to encourage,impart and promote
                         learner's interest in academics, leaving little or no room for flippancy and 
@@ -554,7 +575,8 @@ error_reporting(0);
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="./images/law.jfif" class="teacher" alt="a picture is here " />
+                    <img src="./images/law.jfif" class="teacher" alt="a picture is here "/>
+                   
                     <h5> Arts and Social Science </h5>
                 </div>
                 <div class="col-md-4">
@@ -578,11 +600,11 @@ error_reporting(0);
             
                 <div class="adm_int">
                     <label class="label_text">Names</label>
-                    <input class="input_deg" type="text" name="name" placeholder="Enter Full Names" autocomplete="new-password" required/>
+                    <input class="input_deg" type="text" name="name" placeholder="Enter Full Names" autocomplete="new-password" id="no1"required/>
                 </div>
                 <div class="adm_int">
                     <label class="label_text">Email</label>
-                    <input class="input_deg" type="email" name="email"  placeholder="Enter your Email Address" autocomplete="new-password" required/>
+                    <input class="input_deg" type="email" name="email"  placeholder="Enter your Email Address" autocomplete="new-password" id="no2" required/>
                 </div>
                 <div class="adm_int">
                     <label class="label_text">Phone</label>
@@ -620,7 +642,16 @@ error_reporting(0);
         document.body.scollIntoView(false);
     })
     function thanks(){
-        window.alert("You have applied successfully, Thanks!!!");
+       var pick_one=document.getElementById("no1").value();
+       var pick_two=document.getElementById("no2").value();
+        if(pick_one=="" && pick_two==""){
+           
+            return false;
+        }else{
+            window.alert("You have applied successfully, Thanks!!!");
+
+        }
+       
     }
     </script>
     </body>

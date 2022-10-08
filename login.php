@@ -76,6 +76,7 @@
             }
              .form_deg{
             padding-top:300px;
+            
            
 }
 .label_deg{
@@ -85,14 +86,19 @@
     text-align:right;
     padding-top:10px;
     padding-bottom:10px;
+   
+   
 }
 .login_form{
     background-color:black;
     width:500px;
     padding-top:70px;
     padding-bottom:70px;
+   
+    
 }
 .title_deg{
+    
     background-color: skyblue;
     color:white;
     text-align:center;
@@ -106,6 +112,7 @@
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-size:100% 100%;
+  
 }
 input{
     width:350px;
@@ -165,15 +172,7 @@ input{
     margin-left:100px;
 }
 }
-
-
-
-
-
-
-
-
-            </style>
+        </style>
     </head>
 
 
