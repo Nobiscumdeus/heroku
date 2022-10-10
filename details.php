@@ -1,6 +1,7 @@
 <?php
 error_reporting(0);
-session_start();
+/** 
+ * session_start();
 $_SESSION['usertype']='student';
 if(!isset($_SESSION['username'])){
     header('location:login.php');
@@ -8,7 +9,18 @@ if(!isset($_SESSION['username'])){
     header('location:login.php');
 }
 $_SESSION['student']='page';
+*/
+
 ?>
+<?php
+session_start();
+
+if(isset($_SESSION['username'])){
+    $colleague=$_SESSION['username'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -368,7 +380,7 @@ $_SESSION['student']='page';
            <div class="first">
             <h1>Student Information </h1>
             <button class="btn btn-primary" id="but" >
-                <a href="studenthome.php"> Return to Previous Page</a>
+                <a href="studenthome.php?user=<?php echo $colleague ?>"> Return to Previous Page</a>
             </button> 
             <button class="btn btn-warning" id="but"> Check Results </button> 
             <button class="btn btn-success" id="but"> Know your Tutors </button> <button class="btn btn-primary" id="but"> Payment Activities </button>

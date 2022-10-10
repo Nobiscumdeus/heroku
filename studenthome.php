@@ -6,12 +6,26 @@ if(!isset($_SESSION['username'])){
 }elseif($_SESSION['usertype']=='admin'){
     header('location:login.php');
 }
+
 ?>
 <?php
-if($_SESSION['student']=='page'){
-    echo "<script type='text/javascript'> alert('welcome back');</script>";
+if(isset($_SESSION['username'])){
+    $colleague=$_SESSION['username'];
 }
 ?>
+
+
+<?php
+/**
+ * if($_SESSION['student']=='page'){
+    echo "<script type='text/javascript'> alert('welcome back');</script>";
+}
+
+ * 
+ */
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +33,7 @@ if($_SESSION['student']=='page'){
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
         <meta name="keywords" content="Rose of Sharon,admission,school"/>
-        <meta name="description" content="School eportla system"/>
+        <meta name="description" content="School eportal system"/>
         <meta name="author" content="Nobiscumdeus, Chasfat Projects" />
         <link rel="stylesheet"  href="/heroku/Bootstrap/css/bootstrap-grid.min.css" type="text/css" />
         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" type="text/css" />
@@ -101,7 +115,7 @@ if($_SESSION['student']=='page'){
        <aside>
            <ul>
                <li><a href="">My Courses</a></li>
-              <li> <a href="details.php">School Information</a></li>
+              <li> <a href="details.php?ourstudent=<?php echo $colleague ?>">School Information</a></li>
               <li> <a href="">My Results </a></li>
                <li><a href="">Payment Activities </a></li>
                <li><a href="">Know your Tutors </a></li>
@@ -111,8 +125,10 @@ if($_SESSION['student']=='page'){
            </ul>
        </aside>
        <div class="content">
-        <?php $person=$_GET['user']; ?>
-           <h2>Welcome, <span> <?php echo $person ?>
+        <?php
+        //Was not compulsorily used, it does same work as colleague at least here....
+         $person=$_GET['user']; ?>
+           <h2>Welcome, <span> <?php echo $colleague; ?>
            <style>
             span{
                 text-transform:uppercase;
