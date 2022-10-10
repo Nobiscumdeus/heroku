@@ -36,7 +36,13 @@ elseif($_SESSION['usertype']=='student'){
        <header class="header">
          Admin Dashboard 
        <div class="logout">
-          <button class="btn btn-primary"> <a href="login.php">Logout</a> </button>
+          <button class="btn btn-primary" id="but"> <a href="login.php">
+            <style>
+                #but:hover{
+                    background-color:red;
+                }
+                </style>
+            Logout</a> </button>
 
        </div>
        </header>

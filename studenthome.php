@@ -34,18 +34,55 @@ if($_SESSION['student']=='page'){
             @media(max-width:360px){
                 
                 /**** Nothing for now ... */
-                
+                ul li{
+                    transform:scale(0.8);
+                }
+                .content{
+                margin-left:40%;
+                margin-top:5%;
+        
+                    }
+                .content h3{
+                font-size:16px;
+
+                }
 
 
             }
             /************** For Landscape Orientation ******** */
             @media (orientation:landscape){
+                ul li{
+                    transform:scale(0.8);
+                }
+                .content{
+                margin-left:25%;
+                margin-top:5%;
+        
+                    }
+                .content h3{
+                font-size:16px;
+
+                }
 
             }
             /************ For Laptop Screens ******** */
             @media (min-width:1200px){
+
+                ul li{
+                    transform:scale(0.9);
+                }
+                .content{
+                margin-left:20%;
+                margin-top:5%;
+        
+                    }
+                .content h3{
+                font-size:16px;
+
+                }
+
                 .logout{
-                    margin-top:20px;
+                    margin-top:2px;
                 }
 
             }
@@ -64,8 +101,8 @@ if($_SESSION['student']=='page'){
        <aside>
            <ul>
                <li><a href="">My Courses</a></li>
-               <li><a href="studentresults.php">My Results </a></li>
-               <li><a href="details.php">Student Information</a></li>
+              <li> <a href="details.php">School Information</a></li>
+              <li> <a href="">My Results </a></li>
                <li><a href="">Payment Activities </a></li>
                <li><a href="">Know your Tutors </a></li>
                <li><a href=""> School Calendar </a></li>
@@ -74,10 +111,21 @@ if($_SESSION['student']=='page'){
            </ul>
        </aside>
        <div class="content">
-           <h1>Sidebar Accordion</h1>
-           <p> In this example ,we have added an accordion and a dropdown menu inside the navigation
-               Click on both to understand how they differ from each other. The accordion will push down the content, 
-               whilt the dropdown lays over the content </p>
+        <?php $person=$_GET['user']; ?>
+           <h2>Welcome, <span> <?php echo $person ?>
+           <style>
+            span{
+                text-transform:uppercase;
+            }
+            </style>
+        </span></h2>
+           <p> 
+            <i> Its a wonderful and rare opportunity being a student of Rose of Sharon Group of Schools 
+                Akure at such a time as this. You are enjoined to make the best use of this opportunity . 
+                With best regards from the School Management  
+
+            </i>
+             </p>
        </div>
     </body>
 </html>

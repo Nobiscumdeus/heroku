@@ -34,7 +34,7 @@ $result=mysqli_query($data,$sql);
             @media (max-width:360px){
                 .header{
                     
-                    min-width:1000px;
+                    min-width:1050px;
                     font-size:30px;
                 }
                 ul{
@@ -54,7 +54,7 @@ $result=mysqli_query($data,$sql);
                     font-weight:bold;
                 }
                 .content{
-                    margin-left:52%;
+                    margin-left:55%;
                     margin-top:5%;
 }
 
@@ -74,7 +74,7 @@ $result=mysqli_query($data,$sql);
             @media (orientation:landscape){
                 
                 .header{
-                    min-width:1045px;
+                    min-width:1100px;
                 }
                 
                 table tbody{
@@ -85,6 +85,9 @@ $result=mysqli_query($data,$sql);
                 background-color: black;
                 color:yellow;
                 text-align:center;
+            }
+            ul li{
+                margin-bottom:20px;
             }
 
             }

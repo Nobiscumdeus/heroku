@@ -25,7 +25,9 @@ if($_SERVER["REQUEST_METHOD"]=='POST'){
         $_SESSION['username']=$name;
         $_SESSION['usertype']='student';
         //to take student to the student home page
-        header("location:studenthome.php");
+        //header("location:studenthome.php");
+        header("location:studenthome.php?user=$name");
+        
     }
     elseif($row['usertype']=='admin'){
         $_SESSION['username']=$name;

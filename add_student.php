@@ -76,11 +76,11 @@ if(isset($_POST['add_student'])){
 
         }
         ul li{
-            margin-bottom:15px;
+            margin-bottom:10px;
         }
         ul li a{
         text-decoration:none;
-        font-size:20px;
+        font-size:25px;
         text-decoration:none;
         color:white;
         font-weight:bold;
@@ -98,8 +98,11 @@ if(isset($_POST['add_student'])){
            .div_deg{
                background-color:skyblue;
                width:550px;
+               transform:translateX(20px);
                padding-top:70px;
-               padding-bottom:70px;
+               padding-bottom:40px;
+               margin-top:10px;
+               margin-bottom:60px;
 
            }
            input{

@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
             .head{
                 position:relative;
                 background-color: #fc766aff;
-                min-width:570px;
+                width:690px;
                 
                 padding-left:70px;
                 margin-left:0;
@@ -57,6 +57,8 @@ if(isset($_POST['submit'])){
                 font-size:25px;
                 line-height:10vh;
                 font-family:sans-serif;
+                font-weight:800;
+            
             }
             .logout{
                 float:right;
@@ -65,37 +67,48 @@ if(isset($_POST['submit'])){
             .cover{
                 display:grid;
                 grid-template-columns: 1fr 3fr;
+                transform:scale(1.3);
+                margin-top:47%;
+                height:150vh;
             }
            
             .left-side{
                 background-color:#783937ff;
-                min-height:145vh;
+                
             }
             .right-side{
                 background-color:#f1ac88ff;
-                min-height: 145vh;
+               
             }
             .left-side ul{
-                margin-left:17px;
+                margin-left:30px;
+                
+                
                 padding-top:20px;
                 margin-bottom:20px;
 
             }
             .left-side ul li{
-                
+                transform:translateX(-10px);
                 margin-top:20px;
                 font-size:20px;
                 font-weight:600;
                 list-style-type:none;
+                
             }
             .left-side ul li a {
-                padding-left:5px;
+                
+                padding-left:10px;
                 text-decoration:none;
                 font-size:20px;
                 font-weight:600;
+                color:#fff;
             }
             ul li a:link{
-               color:#f1ac88ff;
+                /** 
+                 color:#f1ac88ff;*/
+              
+               color:white;
             }
             .right-side h3{
                 text-transform: uppercase;
@@ -103,6 +116,7 @@ if(isset($_POST['submit'])){
                 letter-spacing:5px;
                 padding-left:20px;
                 margin-top:10px;
+                
             }
             form input{
                 margin-top:10px;
@@ -165,6 +179,7 @@ if(isset($_POST['submit'])){
             .cover{
                 display:grid;
                 grid-template-columns: 1fr 3fr;
+               
             }
            
             .left-side{
@@ -340,7 +355,15 @@ if(isset($_POST['submit'])){
     <body>
         <div class="head"> 
             Admin Dashboard
-            <div class="logout"> <button class="btn btn-success" onclick='login()'> Logout</button></div>
+            <div class="logout"> <button class="btn btn-success"> <a href="login.php">Logout
+                <style>
+                    a{
+                        text-decoration:none;
+                        color:white;
+                    }
+                    </style>
+                
+        </a></button></div>
 
         </div>
         <div class="cover">
@@ -422,8 +445,8 @@ if(isset($_POST['submit'])){
 
             </div>
             <script>
-                function login(){
-                    window.location('login.php');
+                function log(){
+                    location.href="login.php";
                 }
                 </script>
     </body>
