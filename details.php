@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+session_start();
 /** 
  * session_start();
 $_SESSION['usertype']='student';
@@ -10,10 +11,16 @@ if(!isset($_SESSION['username'])){
 }
 $_SESSION['student']='page';
 */
+if(!isset($_SESSION['username'])){
+    header('location:login.php');
+}elseif($_SESSION['usertype']=='admin'){
+    header('location:login.php');
+}
 
 ?>
+
 <?php
-session_start();
+//session_start();
 
 if(isset($_SESSION['username'])){
     $colleague=$_SESSION['username'];

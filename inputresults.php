@@ -26,6 +26,12 @@ if(isset($_POST['submit'])){
     $grades=htmlspecialchars(stripslashes(trim($_POST['grades'])));
     $term=htmlspecialchars(stripslashes(trim($_POST['term'])));
 
+    $already_thereQuery="SELECT *FROM mathematics WHERE fullnames='$fullnames' AND class='$class' 
+    AND first_test='$first_test' AND second_test='$second_test' AND third_test='$third_test' AND total_tests='$total_tests'
+    AND exams='$exams' AND final_scores='$final_scores' AND grades='$grades' AND term='$term' ";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
     $sql="INSERT INTO mathematics(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
     VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
 
@@ -34,7 +40,13 @@ if(isset($_POST['submit'])){
     if(!$result){
         echo "Thank you ";
     }
-    
+
+   }else{
+    echo "<script type='text/javasccript'>";
+    echo "window.alert('Sorry,student results already posted')";
+    echo "</script>";
+   }
+
 
 }
 
