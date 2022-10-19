@@ -355,11 +355,11 @@ if(isset($_POST['submit'])){
     <body>
         <div class="head"> 
             Admin Dashboard
-            <div class="logout"> <button class="btn btn-success"> <a href="login.php">Logout
+            <div class="logout"> <button> <a href="login.php" class="btn btn-success">Logout
                 <style>
                     a{
                         text-decoration:none;
-                        color:white;
+                   
                     }
                     </style>
                 
