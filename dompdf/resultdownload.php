@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+
 //not including anything e.g include('config.php');
 //require 'domdf/autoload.inc.php';
 require_once 'dompdf/autoload.inc.php';
