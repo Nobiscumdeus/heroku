@@ -340,22 +340,16 @@ if(isset($_POST['submit'])){
             text-transform:uppercase;
             font-weight:600;
          }
-       
-
-
-
-
+    
             
 }
-           
-         
-    
+              
         </style>
     </head>
     <body>
         <div class="head"> 
             Admin Dashboard
-            <div class="logout"> <button> <a href="login.php" class="btn btn-success">Logout
+            <div class="logout"> <a href="login.php" class="btn btn-success">Logout
                 <style>
                     a{
                         text-decoration:none;
@@ -363,7 +357,7 @@ if(isset($_POST['submit'])){
                     }
                     </style>
                 
-        </a></button></div>
+        </a></div>
 
         </div>
         <div class="cover">
