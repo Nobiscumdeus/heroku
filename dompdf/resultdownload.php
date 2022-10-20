@@ -36,7 +36,7 @@ ob_start();
 require('rose.php');
 $html=ob_get_contents();
 ob_get_clean();
-$dompdf->loadHtml('<h1> Welcome </h1>');
+$dompdf->loadHtml($html);
 
 //Optional, set the paper size and its orientation
 $dompdf->setPaper('A4','portrait');
