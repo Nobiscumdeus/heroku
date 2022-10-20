@@ -376,7 +376,7 @@ if(isset($_POST['submit'])){
                 <h3> Check Student Results </h3>
                 <hr/>
                 <div class="form">
-                    <form action="./dompdf/resultdownload.php" method="POST" enctype="multipart/form-data">
+                    <form action="dompdf/htmltopdf.php" method="POST" enctype="multipart/form-data">
                             <input type="text" name="name" class="form-control" placeholder="Full Names of Student e.g Adesida Demilade" id="name" />
                         
                             <input type="text" name="class" class="form-control" placeholder="Student's Class e.g JSS1/JSS2/SSS1" id="class" />
