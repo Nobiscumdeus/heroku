@@ -478,7 +478,7 @@ error_reporting(0);
               <li><a href="#">Home </a></li>
               <!-- scroll to admission page at the bottom after clicking the admission link -->
               <li> <a class="btn btn-success" href="javascript: document.body.scrollIntoView(false);"> Admission</a></li>
-              <li><a class="btn btn-info" onclick="contact()" id="contact"> Contact Us </a></li>
+              <li><a href="tel:+2347038247851" class="btn btn-info" id="contact"> Contact Us </a></li>
              
               <li><a href="login.php" class="btn btn-success">Login</a></li>
              
@@ -629,9 +629,7 @@ error_reporting(0);
     window.alert("plese you need to enable javascript from your browser's settings ");
 </noscript>
 <script>
-    function contact(){
-        window.alert('Reach us through this contact '+ '+23438247851')
-    }
+   
     //Scrolling to the bottom page after clicking the link
     function bottom(){
         document.getElementById('scroll-to-bottom').addEventListener('click',function(){
