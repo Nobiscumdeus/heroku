@@ -68,7 +68,7 @@ $dompdf->set_option('isHtml5ParseEnabled',true);
 $dompdf->set_option('isRemoteEnabled',true);
 
 ob_start();
-require('rose.php');
+//require('rose.php');
 $html=ob_get_contents();
 ob_get_clean();
 //$dompdf->loadHtml($html);
