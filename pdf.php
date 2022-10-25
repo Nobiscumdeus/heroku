@@ -71,7 +71,8 @@ ob_start();
 require('rose.php');
 $html=ob_get_contents();
 ob_get_clean();
-$dompdf->loadHtml($html);
+//$dompdf->loadHtml($html);
+$dompdf->loadHtml('<h1> Rose of Sharon Group of Schools Student Results </h1>');
 
 //Optional, set the paper size and its orientation
 $dompdf->setPaper('A4','portrait');
