@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 //not including anything e.g include('config.php');
-//require 'domdf/autoload.inc.php';
+require 'domdf/autoload.inc.php';
 require 'vendor/autoload.php';
 use Dompdf\Dompdf;
 
@@ -13,7 +13,7 @@ GLOBAL $cls;
 $term=$_POST['term'];
 GLOBAL $term;
 
-//$connect=new mysqli('localhost','root','','rose of sharon');
+//$connect=new mysqli('localhost','root','','school project');
 $con=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
 $civic="SELECT *FROM civic WHERE fullnames='$our' and term ='$term'";
 $biology="SELECT *FROM biology WHERE fullnames='$our' and term ='$term'";
