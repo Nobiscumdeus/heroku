@@ -376,7 +376,7 @@ if(isset($_POST['submit'])){
                 <h3> Check Student Results </h3>
                 <hr/>
                 <div class="form">
-                    <form action="results.php" method="POST" enctype="multipart/form-data">
+                    <form action="pdf.php" method="POST" enctype="multipart/form-data">
                             <input type="text" name="name" class="form-control" placeholder="Full Names of Student e.g Adesida Demilade" id="name" />
                         
                             <input type="text" name="class" class="form-control" placeholder="Student's Class e.g JSS1/JSS2/SSS1" id="class" />
@@ -387,62 +387,9 @@ if(isset($_POST['submit'])){
                            
                     </form>
                 </div>
-                <h3> Student Results </h3>
-                <hr/>
-                <table class="table bordered">
-                    <thead>
-                        <tr>
-                            <th>Full Names </th>
-                            <th> Class </th>
-                            <th> Term </th>
-                            <th> Subject </th>
-                            <th> Score </th>
-                            <th> Grade</th>
-                        </tr>
-                    </thead>
-                <!-- We get the result of the database here -->
-                <?php 
-                while($info=$result->fetch_assoc()){
-                ?>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <?php 
-                                echo "{$info['fullnames']}";
-                                ?>
-
-                            </td>
-                            <td>
-                            <?php echo "{$info['class']}";?>
-
-                            </td>
-                            <td>
-                            <?php echo "{$info['term']}";?>
-
-                            </td>
-                            <td>
-                                Mathematics
-                            </td>
-                            <td>
-                            <?php echo "{$info['final_scores']}";?>
-                            </td>
-                            <td>
-                            <?php echo "{$info['grades']}";?>
-                            </td>
-                        </tr>
-                        <?php 
-                        }
-                        ?>
-                    </tbody>
-                    </div>
-                </table>
-
+                
             </div>
-            <script>
-                function log(){
-                    location.href="login.php";
-                }
-                </script>
+         
     </body>
 
 </html>
