@@ -60,7 +60,6 @@ $yor==false||$crk==false||$frn==false||$com==false||$agr==false||$bsc==false||$h
 //Add options
 
 
-
 //end of options
 //instatiate and use the dompdf
 $dompdf=new Dompdf();

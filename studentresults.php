@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
                
             }
             .left-side ul{
-                margin-left:30px;
+                margin-left:50px;
                 
                 
                 padding-top:20px;
@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
 
             }
             .left-side ul li{
-                transform:translateX(-10px);
+                transform:translateX(10px);
                 margin-top:20px;
                 font-size:20px;
                 font-weight:600;
@@ -98,7 +98,7 @@ if(isset($_POST['submit'])){
             }
             .left-side ul li a {
                 
-                padding-left:10px;
+                padding-left:20px;
                 text-decoration:none;
                 font-size:20px;
                 font-weight:600;
