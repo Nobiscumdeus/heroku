@@ -20,15 +20,17 @@ if($_SERVER["REQUEST_METHOD"]=='POST'){
     $result=mysqli_query($data,$sql);
 
     $row=mysqli_fetch_array($result);
+    $id=$row['id'];
     //usertype is a field or column name in our user table telling us if the user is a student,admin etc
     if($row['usertype']=='student'){
         $_SESSION['username']=$name;
         $_SESSION['usertype']='student';
+    
         //to take student to the student home page
        
         //header("location:studenthome.php");
 
-       header("location:studenthome.php?user=$name");
+       header("location:studenthome.php?id=$id");
    
         
     }

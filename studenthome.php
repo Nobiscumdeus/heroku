@@ -9,21 +9,7 @@ if(!isset($_SESSION['username'])){
 
 ?>
 <?php
-if(isset($_SESSION['username'])){
-    $colleague=$_SESSION['username'];
-}
-?>
-
-
-<?php
-/**
- * if($_SESSION['student']=='page'){
-    echo "<script type='text/javascript'> alert('welcome back');</script>";
-}
-
- * 
- */
-
+$me=$_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -115,8 +101,8 @@ if(isset($_SESSION['username'])){
        <aside>
            <ul>
                <li><a href="">My Courses</a></li>
-              <li> <a href="details.php?ourstudent=<?php echo $colleague ?>">School Information</a></li>
-              <li> <a href="">My Results </a></li>
+              <li> <a href="details.php?id=<?php echo $me; ?>">School Information</a></li>
+              <li> <a href="myresults.php?id=<?php echo $me; ?>">My Results </a></li>
                <li><a href="">Payment Activities </a></li>
                <li><a href="">Know your Tutors </a></li>
                <li><a href=""> School Calendar </a></li>
