@@ -114,7 +114,7 @@ $me=$_GET['id'];
         <?php
         //Was not compulsorily used, it does same work as colleague at least here....
          $person=$_GET['user']; ?>
-           <h2>Welcome, <span> <?php echo $colleague; ?>
+           <h2>Welcome, <span> <?php echo $me; ?>
            <style>
             span{
                 text-transform:uppercase;

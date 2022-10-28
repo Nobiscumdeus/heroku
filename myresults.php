@@ -47,11 +47,11 @@ $student_name=$row['username'];
             }
             .logout{
                 float:right;
-                padding-right:70px;
+                padding-right:40px;
             }
            
             .right-side{
-                background-color:#f1ac88ff;
+               
                 min-height: 100vh;
             }
          
@@ -71,22 +71,22 @@ $student_name=$row['username'];
             }
             .form{
                 background:white;
-                padding-left:50px;
+                padding-left:30px;
                 padding-top:20px;
                
             }
         
          .form-control{
-            width:70%;
+            width:90%;
             padding-top:20px;
-            margin-left:30px;
+            margin-left:25px;
          }
          #submit{
-            width:70%;
+            width:90%;
             padding:15px;
             margin-top:10px;
             margin-bottom:10px;
-            margin-left:31px;
+            margin-left:25px;
             text-transform:uppercase;
             font-weight:600;
          }
@@ -107,7 +107,7 @@ $student_name=$row['username'];
            
         
             <div class="right-side">
-                <h3> Check Student Results </h3>
+                <h3> Check your Results </h3>
                 <hr/>
                 <div class="form">
                     <form action="pdf.php" method="POST" enctype="multipart/form-data">
