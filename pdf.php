@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 //not including anything e.g include('config.php');
-require 'domdf/autoload.inc.php';
+//require 'domdf/autoload.inc.php';
 require 'vendor/autoload.php';
 use Dompdf\Dompdf;
 
