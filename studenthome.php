@@ -10,6 +10,13 @@ if(!isset($_SESSION['username'])){
 ?>
 <?php
 $me=$_GET['id'];
+$conn=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
+$seq="SELECT username,password FROM user WHERE id='$me'";
+$result=mysqli_query($conn,$seq);
+
+$output=mysqli_fetch_array($result);
+$name=$output['username'];
+$password=$output['password'];
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +121,7 @@ $me=$_GET['id'];
         <?php
         //Was not compulsorily used, it does same work as colleague at least here....
          $person=$_GET['user']; ?>
-           <h2>Welcome, <span> <?php echo $me; ?>
+           <h2>Welcome, <span> <?php echo $name; ?>
            <style>
             span{
                 text-transform:uppercase;
