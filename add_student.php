@@ -13,11 +13,11 @@ elseif($_SESSION['usertype']=='student'){
 $data=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
 //$data=new mysqli('localhost','root','','schoolproject');
 if(isset($_POST['add_student'])){
+    $usertype=strtolowercase($usertype);
     $username=htmlspecialchars(stripslashes(trim($_POST['name'])));
     $user_email=htmlspecialchars(stripslashes(trim($_POST['email'])));
     $user_phone=htmlspecialchars(stripslashes(trim($_POST['phone'])));
     $usertype=htmlspecialchars(stripslashes(trim($_POST['usertype'])));
-    $usertype=strtolowercase($usertype);
     $user_password=htmlspecialchars(stripslashes(trim($_POST['password'])));
     
     //we need to check id username already exists to prevent multiple entries for a person
@@ -262,7 +262,7 @@ if(isset($_POST['add_student'])){
                     </div>
                     <div>
                         <label>Userype</label>
-                        <input type="text" name="usertype" placeholder="student or teacher"required />
+                        <input type="text" name="usertype" placeholder="student or teacher" required />
                     </div>
                     <div>
                         <label>Password</label>

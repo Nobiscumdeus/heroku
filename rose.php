@@ -126,7 +126,7 @@
             </h3>
             <br/>
             <h3>
-            ACADEMIC SESSION<span class='our'><b> </b></span>
+            ACADEMIC SESSION<span class='our'><b> 2022/2023 SESSION</b></span>
             </h3>
             
     </div>

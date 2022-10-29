@@ -63,31 +63,26 @@ elseif($_SESSION['usertype']=='student'){
             
             <h3>Administration Dashboard </h3>
            <p id="information">
-            <u> <b> Guidelines with regard to input of results  </b></ul>
+            <u> <b> Guidelines with regard to input of results  </b></u>
             In entering the results for the students under the <u><a href="inputresults.php">Enter results Section </a></u>
             There is a form that requests for the subject code. It must be rightly provided for the results to 
             be entered successfully.<br/>
             Below are the lists of the subjects presently available and their codes 
-            <ul>
-                <li> Mathematics  : <b>MTH </b></li>
-                <li> English : <b>ENG </b></li>
-                <li> Physics  :<b> PHY</b> </li>
-                <li> Chemistry : <b>CHM </b></li>
-                <li> Biology : <b>BIO</b> </li>
-                <li>Marketing : <b>MKT</b></li>
-                <li>Literature  : <b>LIT</b></li>
-                <li>Government  : <b>GOV</b></li>
-                <li>Agricultural Science  : <b>AGR</b></li>
-                <li>Prevocational Studies  : <b>PVS</b></li>
-                <li>Yoruba  : <b>YOR</b></li>
-                <li>Basic Science  : <b>BSC</b></li>
-                <li>Civic Education : <b>CVC</b></li>
-                <li>Home Economics  : <b>HECONS</b></li>
-                <li>French  : <b>FRN</b></li>
-                <li>Computer  : <b>COM</b></li>
-                <li>Christian Religious Knowledge  : <b>CRK</b></li>
+            <p>
+                 Mathematics  : <b>MTH </b> ,English : <b>ENG </b> ,Physics  :<b> PHY</b> <br/>
+                 Chemistry : <b>CHM </b> Biology : <b>BIO</b>  Marketing : <b>MKT</b> Literature  : <b>LIT</b>
+                Government  : <b>GOV</b>
+                Agricultural Science  : <b>AGR</b>
+                Prevocational Studies  : <b>PVS</b>
+                Yoruba  : <b>YOR</b>
+                Basic Science  : <b>BSC</b>
+                Civic Education : <b>CVC</b>
+                Home Economics  : <b>HECONS</b>
+                French  : <b>FRN</b>
+                Computer  : <b>COM</b>
+                Christian Religious Knowledge  : <b>CRK</b>
 
-            </ul>
+            <p>
             
 
 

@@ -99,7 +99,8 @@ $student_name=$row['username'];
         
         <div class="head"> 
             Admin Dashboard
-            <div class="logout"> <button class="btn btn-success" > Logout </button></div>
+    
+            <div class="logout"> <a href="studenthome.php" class="btn btn-warning"> Previous Page </a></div>
 
         </div>
         
