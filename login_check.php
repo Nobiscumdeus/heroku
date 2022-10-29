@@ -40,6 +40,11 @@ if($_SERVER["REQUEST_METHOD"]=='POST'){
         //to take the admin to admin home page 
         header("location:adminhome.php");
     }
+    elseif($row['usertype']=='teacher'){
+        $_SESSION['username']=$name;
+        $_SESSION['usertype']='teacher';
+        header("location:teacherhome.php?id=$id");
+    }
     else{
         //session_start();
         $message="username or password do not match, you may try again!!";

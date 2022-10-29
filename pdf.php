@@ -80,7 +80,7 @@ $dompdf->setPaper('A4','portrait');
 $dompdf->render();
 
 //Output the generated PDF to the browser
-$dompdf->stream("student-results.pdf",['Attachment'=>false]);
+$dompdf->stream("roseofsharon-results.pdf",['Attachment'=>false]);
 
 
 ?>

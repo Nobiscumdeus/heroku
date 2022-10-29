@@ -6,10 +6,10 @@ if(!isset($_SESSION['usertype'])){
     header('location:login.php');
 }
 ?>
+
 <?php
 //make the connection
 $connect=new mysqli("us-cdbr-east-06.cleardb.net","bfeacbb227cae1","4e4f1f58","heroku_e309c0affc5c52d");
-//$connect=new mysqli('localhost','root','','rose of sharon');
 if(!$connect){
     die(mysqli_error());
  
@@ -25,14 +25,43 @@ if(isset($_POST['submit'])){
     $final_scores=htmlspecialchars(stripslashes(trim($_POST['final_scores'])));
     $grades=htmlspecialchars(stripslashes(trim($_POST['grades'])));
     $term=htmlspecialchars(stripslashes(trim($_POST['term'])));
+    $dept=htmlspecialchars(stripslashes(trim($_POST['dept'])));
+    $subject=htmlspecialchars(stripslashes(trim($_POST['subject'])));
 
+
+    if(strtolower($subject)=='mth'){
+         
     $already_thereQuery="SELECT *FROM mathematics WHERE fullnames='$fullnames' AND class='$class' 
-    AND first_test='$first_test' AND second_test='$second_test' AND third_test='$third_test' AND total_tests='$total_tests'
-    AND exams='$exams' AND final_scores='$final_scores' AND grades='$grades' AND term='$term' ";
+    AND term='$term'";
     $already_there=mysqli_query($connect,$already_thereQuery);
    $count=mysqli_num_rows($already_there);
    if($count==0){
     $sql="INSERT INTO mathematics(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+    if(!$result){
+        echo "Thank you ";
+    }
+   }else{
+  
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='mkt'){
+         
+    $already_thereQuery="SELECT *FROM marketing WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO marketing(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
     VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
 
     $result=mysqli_query($connect,$sql);
@@ -42,15 +71,453 @@ if(isset($_POST['submit'])){
     }
 
    }else{
-    echo "<script type='text/javasccript'>";
-    echo "window.alert('Sorry,student results already posted')";
-    echo "</script>";
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
    }
+
+
+    }
+    if(strtolower($subject)=='eng'){
+         
+    $already_thereQuery="SELECT *FROM english WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO english(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='bio'){
+         
+    $already_thereQuery="SELECT *FROM biology WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO biology(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+ 
+    }
+    if(strtolower($subject)=='cvc'){
+         
+    $already_thereQuery="SELECT *FROM civic WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO civic(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='phy'){
+         
+    $already_thereQuery="SELECT *FROM physics WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO physics(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='gov'){
+         
+    $already_thereQuery="SELECT *FROM government WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO government(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='lit'){
+        
+        $already_thereQuery="SELECT *FROM literature WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO literature(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+ 
+
+    }
+    if(strtolower($subject)=='chm'){
+        $already_thereQuery="SELECT *FROM chemistry WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO chemistry(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='yor'){
+         
+        $already_thereQuery="SELECT *FROM yoruba WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO yoruba(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='crk'){
+         
+    $already_thereQuery="SELECT *FROM crk WHERE fullnames='$fullnames' AND class='$class'
+    AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO crk(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='frn'){
+         
+        $already_thereQuery="SELECT *FROM french WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO french(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    
+    if(strtolower($subject)=='com'){
+         
+        $already_thereQuery="SELECT *FROM computer WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO computer(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='agr'){
+         
+        $already_thereQuery="SELECT *FROM agric WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO agric(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='bsc'){
+         
+        $already_thereQuery="SELECT *FROM basicscience WHERE fullnames='$fullnames' AND class='$class' 
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO basicscience(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='hecons'){
+         
+        $already_thereQuery="SELECT *FROM homeecons WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO homeecons(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject)=='pvs'){
+         
+        $already_thereQuery="SELECT *FROM vocationalstudies WHERE fullnames='$fullnames' AND class='$class'
+        AND term='$term'";
+    $already_there=mysqli_query($connect,$already_thereQuery);
+   $count=mysqli_num_rows($already_there);
+   if($count==0){
+
+    $sql="INSERT INTO vocationalstudies(fullnames,class,first_test,second_test,third_test,total_tests,exams,final_scores,grades,term)
+    VALUES('$fullnames','$class','$first_test','$second_test','$third_test','$total_tests','$exams','$final_scores','$grades','$term')";
+
+    $result=mysqli_query($connect,$sql);
+
+    if(!$result){
+        echo "Thank you ";
+    }
+
+   }else{
+  
+
+        echo "<script type='text/javascript'>";
+        echo "window.alert('Sorry,student results already posted')";
+        echo "</script>";
+
+   }
+
+
+    }
+    if(strtolower($subject!='mth'||'pvs'||'yor'||'bsc'||'cvc'||'eng'||'chm'||'agr'||'pvs'||'bio'||'phy'||'lit'||'gov'||'hecons'||'mkt'||'com'||'frn')){
+        echo "<script type='text/javascript'>";
+        echo "window.alert('!ooops!!!! You need to use the right course code e.g MTH for Maths, CHM for Chemistry...<br/>Please check for the right format')";
+        echo "</script>";
+    }
+
+   
+
+
 
 
 }
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -404,10 +871,6 @@ if(isset($_POST['submit'])){
          }
 
 
-
-
-
-
             }
            
             
@@ -432,15 +895,32 @@ if(isset($_POST['submit'])){
 
             </div>
             <div class="right-side">
-                <form role="form" action="#" method="POST">
+               
+            <form role="form" action="#" method="POST">
                     <h3> Student Assessment Form </h3>
+                    <hr/>
+                    <h5 id="first-h"> Student Details  <style> #first-h{margin-top:1%; margin-left:5%;} </style></h5>
                     <hr/>
                     <div class="form-group">
                         <input type="text" class="form-control" name="fullnames" placeholder="Enter Student's Name e.g Kehinde Goodluck" required/>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="class" placeholder="Enter Student's Class e.g JSS1/JSS2/JSS3/SSS1/SSS2" required />
+        
                     </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="dept" placeholder="Enter Student's Department e.g Arts/Science/Commercial"  />
+                
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" placeholder="Enter the subject code e.g MTH,PHY,ENG,BIO,LIT,CRK,RNV etc" id="subject"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="term" placeholder="Enter Term e.g First Term/Second Term /Third Term" />
+                    </div>
+                    <h5 id="sec-h"> Student Scores <style> #sec-h{ margin-left:5%;margin-top:1%;} </style></h5>
+                    <hr/>
+
                     <div class="form-group">
                         <input type="number" class="form-control" name="first_test" placeholder="First Test Score e.g 10 out of 20" min="0" max="20" required />
                     </div>
@@ -462,14 +942,17 @@ if(isset($_POST['submit'])){
                     <div class="form-group">
                         <input type="text" class="form-control" name="grades" placeholder="Student Grades e.g A/B/C/D/E/F" maxlength="1" required/>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="term" placeholder="Enter Term e.g First Term/Second Term /Third Term" />
-                    </div>
+                    
                     <input type="submit" class="btn btn-warning btn-lg" name="submit" id="submit"/>
 
 
                 </form>
-                
+
+
+
+
+
+
             </div>
     </body>
 

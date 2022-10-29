@@ -16,7 +16,8 @@ if(isset($_POST['add_student'])){
     $username=htmlspecialchars(stripslashes(trim($_POST['name'])));
     $user_email=htmlspecialchars(stripslashes(trim($_POST['email'])));
     $user_phone=htmlspecialchars(stripslashes(trim($_POST['phone'])));
-    $usertype="student";
+    $usertype=htmlspecialchars(stripslashes(trim($_POST['usertype'])));
+    $usertype=strtolowercase($usertype);
     $user_password=htmlspecialchars(stripslashes(trim($_POST['password'])));
     
     //we need to check id username already exists to prevent multiple entries for a person
@@ -260,12 +261,16 @@ if(isset($_POST['add_student'])){
                         <input type="number" name="phone" required />
                     </div>
                     <div>
+                        <label>Userype</label>
+                        <input type="text" name="usertype" placeholder="student or teacher"required />
+                    </div>
+                    <div>
                         <label>Password</label>
                         <input type="password" name="password" />
                     </div>
                     <div>
                     
-                        <input type="submit" id="me"name="add_student" value="Add Student" class="btn btn-primary btn-lg" />
+                        <input type="submit" id="me"name="add_student" value="Add Student/Teacher" class="btn btn-primary btn-lg" />
                     </div>
                 </form>
         </center>
