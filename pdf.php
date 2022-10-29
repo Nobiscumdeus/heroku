@@ -67,11 +67,11 @@ $dompdf->set_option('isHtml5ParseEnabled',true);
 $dompdf->set_option('isRemoteEnabled',true);
 
 ob_start();
-//require('rose.php');
+require 'rose.php';
 $html=ob_get_contents();
 ob_get_clean();
-//$dompdf->loadHtml($html);
-$dompdf->loadHtml('<h1> Rose of Sharon Group of Schools Student Results </h1>');
+$dompdf->loadHtml($html);
+
 
 //Optional, set the paper size and its orientation
 $dompdf->setPaper('A4','portrait');

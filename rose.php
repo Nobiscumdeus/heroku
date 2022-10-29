@@ -94,7 +94,7 @@
             
     
 
-            <h3 id='eh'> Rose of Sharon Group of Schools </h3>
+            <h3 id='eh'> Rose of Sharon Group of Schools Akure</h3>
            
         </div>
         <div class='cover'>
