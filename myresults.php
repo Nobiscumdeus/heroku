@@ -98,9 +98,9 @@ $student_name=$row['username'];
     <body>
         
         <div class="head"> 
-            Admin Dashboard
+            Student Dashboard
     
-            <div class="logout"> <a href="studenthome.php" class="btn btn-warning"> Previous Page </a></div>
+            <div class="logout"> <a href="studenthome.php?id=<?php echo $me ?>" class="btn btn-warning"> Previous Page </a></div>
 
         </div>
         
