@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
             }
             .cover{
                 display:grid;
-                grid-template-columns: 1fr 3fr;
+                grid-template-columns: 1.5fr 3fr;
                 transform:scale(1.3);
                 margin-top:47%;
                 height:150vh;
@@ -91,7 +91,7 @@ if(isset($_POST['submit'])){
             .left-side ul li{
                 transform:translateX(10px);
                 margin-top:20px;
-                font-size:20px;
+                font-size:16px;
                 font-weight:600;
                 list-style-type:none;
                 

@@ -249,7 +249,7 @@ if(isset($_POST['add_student'])){
        ?>
        <div class="content">
           <center>
-            <h2>Add Student</h2>
+            <h2>Registration</h2>
             <div class="div_deg">
                 <form action="#" method="POST" autocomplete="off">
                     <div>

@@ -109,10 +109,8 @@ $password=$output['password'];
            <ul>
               
               <li> <a href="details.php?id=<?php echo $me; ?>">School Information</a></li>
-              <li> <a href="studentresults.php">My Results </a></li>
-              
-               <li><a href=""> View Results </a></li>
-               <li> <a href="">Input Results</a></li>
+              <li> <a href="studentresults.php">View Results </a></li>
+               <li> <a href="inputresults.php">Input Results</a></li>
                
            </ul>
        </aside>
