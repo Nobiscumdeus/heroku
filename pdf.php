@@ -67,7 +67,7 @@ $dompdf->set_option('isHtml5ParseEnabled',true);
 $dompdf->set_option('isRemoteEnabled',true);
 
 //justing adding this line 
-$dompdf->getOptions()->setChroot(['heroku/images/IMG-20221008-WA0004-removebg-preview.png']);
+$dompdf->getOptions()->setChroot(['/heroku/images/IMG-20221008-WA0004-removebg-preview.png']);
 
 ob_start();
 require('rose.php');
