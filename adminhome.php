@@ -69,7 +69,7 @@ elseif($_SESSION['usertype']=='student'){
             be entered successfully.<br/>
             Below are the lists of the subjects presently available and their codes 
             <p>
-                 Mathematics  : <b>MTH </b> ,English : <b>ENG </b> ,Physics  :<b> PHY</b> <br/>
+                 Mathematics  : <b>MTH </b> ,English : <b>ENG </b> ,Physics  :<b> PHY</b> 
                  Chemistry : <b>CHM </b> Biology : <b>BIO</b>  Marketing : <b>MKT</b> Literature  : <b>LIT</b>
                 Government  : <b>GOV</b>
                 Agricultural Science  : <b>AGR</b>
