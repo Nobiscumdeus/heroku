@@ -64,15 +64,15 @@ $yor==false||$crk==false||$frn==false||$com==false||$agr==false||$bsc==false||$h
 //instatiate and use the dompdf
 $dompdf=new Dompdf();
 $dompdf->set_option('isHtml5ParseEnabled',TRUE);
-$dompdf->set_option('isRemoteEnabled',TRUE);
+$//dompdf->set_option('isRemoteEnabled',TRUE);
 
 //New updates in codes    
 $options = $dompdf->getOptions(); 
 $options->set(array('isRemoteEnabled' => true));
 $dompdf->setOptions($options);
 
-//justing adding this line 
-$dompdf->getOptions()->setChroot(['https://github.com/Nobiscumdeus/heroku/blob/master/images/IMG-20221008-WA0004-removebg-preview.png']);
+//justing adding this line for localfiles 
+//$dompdf->getOptions()->setChroot(['https://github.com/Nobiscumdeus/heroku/blob/master/images/IMG-20221008-WA0004-removebg-preview.png']);
 
 ob_start();
 require('rose.php');
