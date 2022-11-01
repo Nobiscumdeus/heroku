@@ -4,6 +4,7 @@ error_reporting(E_ALL);
 //require 'domdf/autoload.inc.php';
 require 'vendor/autoload.php';
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
 //Major php codes run here
 $our=$_POST['name'];
