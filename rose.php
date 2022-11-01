@@ -92,7 +92,7 @@
     <body>
         <div class='head'> 
             
-        <img src="/images/classroom1.jfif" width="80px" height="80px" />
+        <img src="C:/xampp/htdocs/heroku/images/IMG-20221008-WA0004-removebg-preview.png" width="80px" height="80px" />
 
 
             <h3 id='eh'> Rose of Sharon Group of Schools Akure</h3>
