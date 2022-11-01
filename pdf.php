@@ -72,7 +72,7 @@ $dompdf->set_option('isRemoteEnabled',TRUE);
 //$dompdf->setOptions($options);
 
 //justing adding this line for localfiles 
-$dompdf->getOptions()->setChroot(['/heroku/images/IMG-20221008-WA0004-removebg-preview.png']);
+$dompdf->getOptions()->setChroot(['./heroku/']);
 
 ob_start();
 require('rose.php');
