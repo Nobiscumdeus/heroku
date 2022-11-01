@@ -4,7 +4,6 @@ error_reporting(E_ALL);
 //require 'domdf/autoload.inc.php';
 require 'vendor/autoload.php';
 use Dompdf\Dompdf;
-use Dompdf\Options;
 
 //Major php codes run here
 $our=$_POST['name'];
@@ -59,14 +58,13 @@ $yor==false||$crk==false||$frn==false||$com==false||$agr==false||$bsc==false||$h
 
 
 //Add options
-$options=new Options();
-$options->set('isRemoteEnabled',true);
+
 
 //end of options
 //instatiate and use the dompdf
-$dompdf=new Dompdf($options);
-//$dompdf->set_option('isHtml5ParseEnabled',TRUE);
-//$dompdf->set_option('isRemoteEnabled',TRUE);
+$dompdf=new Dompdf();
+$dompdf->set_option('isHtml5ParseEnabled',TRUE);
+$dompdf->set_option('isRemoteEnabled',TRUE);
 
 //New updates in codes    
 //$options = $dompdf->getOptions(); 
@@ -74,7 +72,7 @@ $dompdf=new Dompdf($options);
 //$dompdf->setOptions($options);
 
 //justing adding this line for localfiles 
-$dompdf->getOptions()->setChroot(['C:/xampp/htdocs/heroku/images/IMG-20221008-WA0004-removebg-preview.png']);
+$dompdf->getOptions()->setChroot(['/heroku/images/IMG-20221008-WA0004-removebg-preview.png']);
 
 ob_start();
 require('rose.php');
