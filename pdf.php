@@ -58,13 +58,14 @@ $yor==false||$crk==false||$frn==false||$com==false||$agr==false||$bsc==false||$h
 
 
 //Add options
-
+$options=new Options();
+$options->set('isRemoteEnabled',true);
 
 //end of options
 //instatiate and use the dompdf
-$dompdf=new Dompdf();
-$dompdf->set_option('isHtml5ParseEnabled',TRUE);
-$dompdf->set_option('isRemoteEnabled',TRUE);
+$dompdf=new Dompdf($options);
+//$dompdf->set_option('isHtml5ParseEnabled',TRUE);
+//$dompdf->set_option('isRemoteEnabled',TRUE);
 
 //New updates in codes    
 //$options = $dompdf->getOptions(); 
