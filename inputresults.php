@@ -501,11 +501,7 @@ if(isset($_POST['submit'])){
 
 
     }
-    if(strtolower($subject!='mth'||'pvs'||'yor'||'bsc'||'cvc'||'eng'||'chm'||'agr'||'pvs'||'bio'||'phy'||'lit'||'gov'||'hecons'||'mkt'||'com'||'frn')){
-        echo "<script type='text/javascript'>";
-        echo "window.alert('!ooops!!!! You need to use the right course code e.g MTH for Maths, CHM for Chemistry...<br/>Please check for the right format')";
-        echo "</script>";
-    }
+   
 
    
 
